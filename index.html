@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <link rel="stylesheet" href="bootstrap.min.css" />
+        <link rel="stylesheet" href="style.css" />
+        <link rel="shortcut icon" href="ajax.svg" type="image/vnd.microsoft.icon" />
+        <title>FULLSTACK</title>
+    </head>
+
+    <body>
+        <section class="px-2 mySection">
+            <h1 class="text-center">Exemple fullstack</h1>
+            <a class="btn btn-info float-end mb-1" role="button" aria-disabled="false" href="backend.php"> acceder aux
+                backend</a>
+            <form>
+                <div class="mb-1">
+                    <label for="id" class="form-label">id</label>
+                    <input type="text" class="form-control" id="id" disabled>
+                </div>
+                <div class="mb-1">
+                    <label for="name" class="form-label">name</label>
+                    <input type="text" class="form-control" id="name">
+                </div>
+                <div class="mb-1">
+                    <label for="email" class="form-label">Email address</label>
+                    <input type="email" class="form-control" id="email">
+                </div>
+                <button name="add" id="add" class="btn btn-primary" onclick="doPost('add')" value="add">add</button>
+                <button name="update" id="update" class="btn btn-success" onclick="doPost('update')"
+                    value="update">update</button>
+                <button name="delete" id="delete" class="btn btn-danger" onclick="doPost('delete')"
+                    value="delete">delete</button>
+                <button class="btn btn-dark" onclick="clear()">clear</button>
+            </form>
+
+            <table class="table table-striped mt-2">
+                <thead>
+                    <tr>
+                        <th>ID</th>
+                        <th>NAME</th>
+                        <th>EMAIL</th>
+                        <th>UPDATE</th>
+                        <th>DELETE</th>
+                    </tr>
+                </thead>
+                <tbody id="t_body"></tbody>
+            </table>
+        </section>
+        <script type="text/javascript" src="main.js"></script>
+    </body>
+
+</html>
